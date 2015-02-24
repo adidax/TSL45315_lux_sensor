@@ -35,7 +35,7 @@ void setup()
 
   // Serielle Übertragung zum PC starten (für Ausgabe in Serial Monitor)
   Serial.begin(9600);
-  // nur für Arduino Leonardoi und Micro: Warten bis serielle
+  // nur für Arduino Leonardo und Micro: Warten bis serielle
   // Schnittstelle bereit ist
   while(!Serial);
 
@@ -56,13 +56,13 @@ void setup()
   // 
   // 0x80|REGID bedeutet soviel
   //      0x80 = 1000 0000
-  //   OR 0x0A = 0000 1000
+  //   OR 0x0A = 0000 1010
   //             ---------
-  //      ergibt 1000 1000
+  //      ergibt 1000 1010
   //
   // Dieses Byte wird dann mit Wire.write  in die Warteschlange gesteckt
   Wire.write(0x80|REG_ID);
-  // und mit Wire.endTransmission an das Devide geschickt
+  // und mit Wire.endTransmission an den Sensor geschickt
   Wire.endTransmission();
 
   // Mit dem obigen Befehl 0x80|REG_ID haben wir dem Sensor mitgeteilt,
@@ -172,7 +172,7 @@ void loop()
   // Messwert ausgeben und 500ms warten
   Serial.print("Lux: ");
   Serial.println(lux, DEC);
-  delay(500);
+  delay(1000);
 }
 
 
