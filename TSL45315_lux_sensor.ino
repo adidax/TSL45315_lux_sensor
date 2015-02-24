@@ -1,10 +1,13 @@
 /*
   Beispielsketch für TSL45315 Breakout Board (Digitaler Licht Sensor)
  
+ Basierend auf dem Originalcode von Watterott:
+ https://github.com/watterott/TSL45315-Breakout
+ 
  Beschreibung und Datenblatt des Sensors:
  http://ams.com/eng/Products/Sensor-Driven-Lighting/SDL-Ambient-Light-Sensors/TSL45315
  
- I2C Pins auf den einzelnen Arduino Boards
+ I2C Pins auf den einzelnen Arduino Boards:
  Board           I2C/TWI Pins
  SDA, SCL
  ----------------------------
